@@ -35,45 +35,36 @@ O aplicativo utiliza um banco de dados SQLite para armazenar informações sobre
 
 #### Adição de Nova Lista
 - **Descrição:** Permite aos usuários criar uma nova lista de tarefas.
-- **Função: `filterList`:**
-  - Captura o nome da nova lista.
-  - Adiciona a lista ao banco de dados SQLite.
-  - Atualiza a lista de listas exibida na tela.
+- **Função:**
+  - `addList`: Captura o nome da nova lista, adiciona a lista ao banco de dados SQLite e atualiza a exibição da lista na tela.
 
-#### Pesquisa de Listas
+#### Filtragem Dinâmica de Listas
 - **Descrição:** Permite aos usuários pesquisar listas existentes com base no nome.
 - **Função:**
-  - Filtra as listas com base no texto de pesquisa.
-  - Atualiza dinamicamente a exibição da lista de listas.
+  - `filterList`: Filtra dinamicamente as listas com base no texto de pesquisa e atualiza a exibição da lista.
 
 #### Seleção e Exclusão de Listas
 - **Descrição:** Possibilita aos usuários selecionar e excluir uma ou mais listas.
 - **Função:**
-  - Entra ou sai do modo de exclusão.
-  - Seleciona/deseleciona listas para exclusão.
-  - Exclui as listas selecionadas do banco de dados.
-  - Atualiza a lista de listas exibida na tela.
+  - `handleSelectItem`: Entra ou sai do modo de exclusão, seleciona/deseleciona listas e exclui as listas selecionadas do banco de dados.
+  - `handleDeleteSelectedLists`: Exclui as listas selecionadas do banco de dados e atualiza a exibição da lista.
 
 ### Tela de Lista de Tarefas (`TaskList.js`)
 
 #### Adição de Nova Tarefa
 - **Descrição:** Permite aos usuários adicionar uma nova tarefa a uma lista específica.
 - **Função:**
-  - Captura a descrição da nova tarefa.
-  - Adiciona a tarefa à lista associada no banco de dados SQLite.
-  - Atualiza a lista de tarefas exibida na tela.
+  - `addTaskToList`: Captura a descrição da nova tarefa, a adiciona à lista associada no banco de dados SQLite e atualiza a exibição da lista de tarefas.
 
 #### Marcação de Tarefa como Concluída
 - **Descrição:** Permite aos usuários marcar uma tarefa como concluída ou desmarcar como pendente.
 - **Função:**
-  - Altera o estado "done" da tarefa no banco de dados.
-  - Atualiza a exibição da lista de tarefas.
+  - `handleToggleDone`: Altera o estado "done" da tarefa no banco de dados e atualiza a exibição da lista de tarefas.
 
 #### Exclusão de Tarefa
 - **Descrição:** Possibilita aos usuários excluir uma tarefa específica de uma lista.
 - **Função:**
-  - Remove a tarefa do banco de dados.
-  - Atualiza a lista de tarefas exibida na tela.
+  - `handleDeleteTask`: Remove a tarefa do banco de dados e atualiza a exibição da lista de tarefas.
 
 ## Instalação e Execução
 
