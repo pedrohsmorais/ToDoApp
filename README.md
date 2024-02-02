@@ -84,9 +84,3 @@ Para executar o aplicativo localmente utilizando o Expo, siga os seguintes passo
 4. Execute `npm install` para instalar as dependências.
 5. Execute `npx expo start` para iniciar o servidor de desenvolvimento com o Expo. Ou execute `npm start` para iniciar apenas com React Native.
 6. Abra o aplicativo em um emulador, dispositivo físico ou use o Expo Go no seu dispositivo móvel.
-
-## Considerações Finais
-
-Este aplicativo foi desenvolvido como parte  de uma jornada de aprendizado, explorando conceitos essenciais de desenvolvimento React Native, documentação de código, manipulação de banco de dados e implementação de animações de componentes.
-
-Experimente a praticidade e a eficácia da Lista de Tarefas e mantenha-se organizado no seu dia a dia!
