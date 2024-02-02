@@ -1,9 +1,5 @@
 # ToDoApp
 
-Demo do App
-
-
-
 Bem-vindo à Lista de Tarefas, um aplicativo simples e eficaz desenvolvido em React Native. Aqui, você pode criar, visualizar e gerenciar suas listas de tarefas de maneira intuitiva. Utilizando o React Navigation para uma navegação fluida entre telas e uma integração com um banco de dados SQLite para armazenar informações essenciais. Este aplicativo é o resultado de uma jornada de aprendizado, onde exploramos conceitos fundamentais de desenvolvimento React Native, documentação de código, manipulação de banco de dados e implementação de animações de componentes.
 
 ## Estrutura de Diretórios
