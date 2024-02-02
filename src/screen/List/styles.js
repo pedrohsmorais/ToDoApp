@@ -1,0 +1,127 @@
+import { StyleSheet } from "react-native";
+import { getStatusBarHeight } from "react-native-status-bar-height";
+
+export const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#111',
+      color: '#fff',
+      paddingTop: 30 + getStatusBarHeight(true),
+    },
+    header: {
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    listText: {
+      fontSize: 30,
+      color: '#F5F5F5',
+      paddingVertical: 15,
+      paddingLeft: 20,
+    },
+    inputlight: {
+      width: '90%',
+      height: 40,
+      fontSize: 15,
+      borderColor: 'gray',
+      borderWidth: 2,
+      borderRadius: 5,
+      paddingLeft: 10,
+      color: '#F5F5F5',
+      marginBottom: 15,
+    },
+    itemDeleteMode: {
+      flexDirection: 'row',
+      backgroundColor: '#333',
+      height: 60,
+      borderRadius: 5,
+      padding: 10,
+      marginVertical: 8,
+      marginHorizontal: 20,
+      alignItems: 'center',
+      justifyContent:'space-between'
+    },
+    item: {
+      backgroundColor: '#333',
+      height: 60,
+      borderRadius: 5,
+      padding: 10,
+      marginVertical: 8,
+      marginHorizontal: 20,
+      justifyContent: 'center', 
+    },
+    itemText: {
+      fontSize: 18,
+      color: '#F5F5F5',
+    },
+    isSelected: {
+        height: 16,
+        width:16,
+        borderRadius: 8,
+        borderColor: '#fff',
+        backgroundColor: 'white',
+    },
+    deletingButton: {
+        padding: 2,
+        borderRadius: 16,
+        borderWidth: 2,
+        borderColor: '#999',
+    },
+    bottomButton: {
+      position: 'absolute',
+      bottom: 40,
+      right: 20,
+      height: 60,
+      width: 60,
+      backgroundColor: '#333',
+      borderRadius: 30,
+      justifyContent: 'center', 
+      alignItems: 'center',
+    },
+    modalContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    },
+    modalContent: {
+      backgroundColor: '#fff',
+      padding: 20,
+      borderRadius: 10,
+      width: '80%',
+      alignItems: 'center',
+    },
+    modalTitle: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      marginBottom: 15,
+    },
+    inputDark: {
+      width: '90%',
+      height: 40,
+      fontSize: 15,
+      borderColor: 'gray',
+      borderWidth: 2,
+      borderRadius: 5,
+      paddingLeft: 10,
+      color: '#000',
+      marginBottom: 15,
+    },
+    addButton: {
+      backgroundColor: 'green',
+      paddingVertical: 10,
+      paddingHorizontal: 20,
+      borderRadius: 5,
+      marginBottom: 10,
+    },
+    closeButton: {
+      backgroundColor: '#FF1040',
+      paddingVertical: 10,
+      paddingHorizontal: 20,
+      borderRadius: 5,
+    },
+    buttonText: {
+      color: '#fff',
+      fontSize: 16,
+    },
+  });
+  
