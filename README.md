@@ -1,6 +1,10 @@
-# Documentação do Aplicativo
+# ToDoApp
 
-O aplicativo é uma lista de tarefas simples que permite aos usuários criar, visualizar e gerenciar listas de tarefas. Ele é desenvolvido em React Native, utilizando o React Navigation para a navegação entre telas e uma integração com um banco de dados SQLite para armazenar as informações das listas e tarefas.
+Demo do App
+
+
+
+Bem-vindo à Lista de Tarefas, um aplicativo simples e eficaz desenvolvido em React Native. Aqui, você pode criar, visualizar e gerenciar suas listas de tarefas de maneira intuitiva. Utilizando o React Navigation para uma navegação fluida entre telas e uma integração com um banco de dados SQLite para armazenar informações essenciais. Este aplicativo é o resultado de uma jornada de aprendizado, onde exploramos conceitos fundamentais de desenvolvimento React Native, documentação de código, manipulação de banco de dados e implementação de animações de componentes.
 
 ## Estrutura de Diretórios
 
@@ -19,11 +23,19 @@ O código do aplicativo está organizado em uma estrutura de diretórios padrão
 
 O aplicativo faz uso de várias bibliotecas externas para fornecer funcionalidades específicas. As principais dependências incluem:
 
-- **React Navigation**: Utilizado para gerenciar a navegação entre as telas do aplicativo.
+- **@react-navigation/native**: Facilita a navegação entre as telas do aplicativo.
+- **@react-navigation/native-stack**: Fornece uma pilha de navegação nativa para aprimorar a experiência do usuário.
+- **expo**: Uma plataforma para criar aplicativos React Native com facilidade, incluindo ferramentas de desenvolvimento e bibliotecas integradas.
+- **expo-sqlite**: Facilita a integração do SQLite no ambiente Expo para manipulação de banco de dados local.
+- **expo-status-bar**: Componente que permite controlar a barra de status do aplicativo Expo.
+- **react**: A biblioteca principal do React para construir interfaces de usuário.
+- **react-native**: O framework para construção de aplicativos móveis usando React.
 - **react-native-gesture-handler**: Biblioteca que fornece gestos nativos para melhorar a experiência do usuário.
-- **react-native-reanimated**: Utilizado para criar animações fluidas nas transições de tela.
+- **react-native-reanimated**: Utilizado para criar animações.
+- **react-native-safe-area-context**: Gerenciamento seguro de áreas visíveis em dispositivos móveis.
+- **react-native-screens**: Facilita a criação de transições de tela eficientes e nativas.
+- **react-native-status-bar-height**: Utilizado para obter a altura da barra de status no React Native.
 - **react-native-uuid**: Biblioteca para gerar identificadores únicos universais (UUID).
-- **@expo/vector-icons**: Conjunto de ícones vetorizados utilizados para melhorar a estética do aplicativo.
 
 ## Banco de Dados
 
@@ -76,3 +88,9 @@ Para executar o aplicativo localmente utilizando o Expo, siga os seguintes passo
 4. Execute `npm install` para instalar as dependências.
 5. Execute `npx expo start` para iniciar o servidor de desenvolvimento com o Expo. Ou execute `npm start` para iniciar apenas com React Native.
 6. Abra o aplicativo em um emulador, dispositivo físico ou use o Expo Go no seu dispositivo móvel.
+
+## Considerações Finais
+
+Este aplicativo foi desenvolvido como parte  de uma jornada de aprendizado, explorando conceitos essenciais de desenvolvimento React Native, documentação de código, manipulação de banco de dados e implementação de animações de componentes.
+
+Experimente a praticidade e a eficácia da Lista de Tarefas e mantenha-se organizado no seu dia a dia!
