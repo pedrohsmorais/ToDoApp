@@ -35,8 +35,7 @@ O aplicativo utiliza um banco de dados SQLite para armazenar informações sobre
 
 #### Adição de Nova Lista
 - **Descrição:** Permite aos usuários criar uma nova lista de tarefas.
-- **Função:**
-- `filterList`:
+- **Função: `filterList`:**
   - Captura o nome da nova lista.
   - Adiciona a lista ao banco de dados SQLite.
   - Atualiza a lista de listas exibida na tela.
