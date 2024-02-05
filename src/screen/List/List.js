@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FlatList, TouchableOpacity, TextInput, Text, View, Modal, Alert } from 'react-native';
 import uuid from 'react-native-uuid';
-import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialIcons, Entypo } from '@expo/vector-icons';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 
 import { styles } from './styles';
 import { openDatabase } from '../../database/database';
+import Checkbox from '../../components/CheckBox/CheckBox';
 
 const db = openDatabase();
 
@@ -126,10 +127,13 @@ export default function List({ navigation }) {
   };
 
   const renderListItem = ({ item }) => {
+
+    
     return (
-      <Animated.View entering={FadeIn.duration(800)} exiting={FadeOut.duration(800)}>
+      <Animated.View entering={FadeIn.duration(300)} exiting={FadeOut.duration(10)}>
         <TouchableOpacity
           key={item.id}
+          activeOpacity={1} 
           style={isDeletingLists ? styles.itemDeleteMode : styles.item}
           onLongPress={() => setIsDeletingLists(!isDeletingLists)}
           onPress={() => {
@@ -143,14 +147,10 @@ export default function List({ navigation }) {
           <Text style={styles.itemText}>{item.name}</Text>
           {isDeletingLists && (
             <TouchableOpacity
-            style={styles.selectButton}
+            style={styles.isSelected}
             onPress={() => handleSelectItem(item.id)}
             >
-              {selectedItems.includes(item.id) ? (
-                <MaterialIcons name="check-box" size={24} color="#4CAF50" />
-                ) : (
-                  <MaterialIcons name="check-box-outline-blank" size={24} color="#666" />
-                  )}
+              <Checkbox item={item} selectedItems={selectedItems}/>
             </TouchableOpacity>
           )}
         </TouchableOpacity>
@@ -181,7 +181,7 @@ export default function List({ navigation }) {
         />
         {isDeletingLists ? (
           <TouchableOpacity style={styles.bottomButton} onPress={handleDeleteSelectedLists}>
-            <MaterialIcons name="close" size={18} color="#FF1040" />
+            <Entypo name="erase" size={24} color="#FF1040" />
           </TouchableOpacity>
         ) : (
           <TouchableOpacity style={styles.bottomButton} onPress={() => setModalVisible(true)}>

@@ -13,6 +13,8 @@ import { Swipeable } from 'react-native-gesture-handler';
 
 import { styles } from './styles';
 
+import TaskView from '../../components/TaskView/TaskView';
+
 const db = openDatabase();
 
 const TaskList = ({ route }) => {
@@ -163,10 +165,6 @@ const TaskList = ({ route }) => {
     handleDeleteTask(item.id);
   };
 
-  const handleTaskPress = () => {
-    handleToggleDone(item.id);
-  };
-
   return (
     <Swipeable
       key={item.id}
@@ -201,16 +199,7 @@ const TaskList = ({ route }) => {
         }).start();
       }}
     >
-      <TouchableOpacity style={styles.taskItem} onPress={handleTaskPress}>
-          <View 
-          style={[ styles.checkbox, item.done && styles.checked]}
-            >
-            {item.done && (
-            <Ionicons name="checkmark" size={24} color="black" style={styles.checkIcon} />
-            )}
-          </View>
-        <Text style={styles.checkboxLabel}>{item.description}</Text>
-      </TouchableOpacity>
+      <TaskView item={ item } onToggleDone={handleToggleDone}/>
     </Swipeable>
   );
 };

@@ -53,13 +53,6 @@ export const styles = StyleSheet.create({
       fontSize: 18,
       color: '#F5F5F5',
     },
-    isSelected: {
-        height: 16,
-        width:16,
-        borderRadius: 8,
-        borderColor: '#fff',
-        backgroundColor: 'white',
-    },
     deletingButton: {
         padding: 2,
         borderRadius: 16,
