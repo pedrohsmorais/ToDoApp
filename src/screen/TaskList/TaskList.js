@@ -6,6 +6,7 @@ import {
   TextInput,
   FlatList,
   Animated,
+  Alert,
 } from 'react-native';
 import { openDatabase } from '../../database/database';
 import { EvilIcons, MaterialIcons, Ionicons } from '@expo/vector-icons';
@@ -37,9 +38,7 @@ const TaskList = ({ route }) => {
           if (result.rows.length > 0) {
             const listNameRes = result.rows.item(0).name;
             const tasksJson = result.rows.item(0).tasks_json;
-
             setListName(listNameRes);
-
             if (tasksJson) {
               const tasks = JSON.parse(tasksJson);
               setTaskList(tasks);
@@ -79,16 +78,15 @@ const TaskList = ({ route }) => {
               [JSON.stringify(updatedTasks), listaId],
               (_, updateResult) => {
                 if (updateResult.rowsAffected > 0) {
-                  console.log('Tarefa adicionada com sucesso!');
                   setTaskList(updatedTasks);
                   setTaskDescription('');
                 } else {
-                  console.error('Falha ao adicionar a tarefa à lista.');
+                  Alert.alert('Falha ao adicionar a tarefa à lista.')
                 }
               }
             );
           } else {
-            console.error('Lista não encontrada.');
+            Alert.alert('Lista não encontrada!')
           }
         }
       );
@@ -110,15 +108,14 @@ const TaskList = ({ route }) => {
               [JSON.stringify(updatedTasks), listaId],
               (_, updateResult) => {
                 if (updateResult.rowsAffected > 0) {
-                  console.log('Tarefa excluída com sucesso!');
                   setTaskList(updatedTasks);
                 } else {
-                  console.error('Falha ao excluir a tarefa da lista.');
+                  Alert.alert('Falha ao excluir a tarefa da lista.');
                 }
               }
             );
           } else {
-            console.error('Lista não encontrada.');
+            Alert.alert('Lista não encontrada.');
           }
         }
       );
@@ -145,13 +142,9 @@ const TaskList = ({ route }) => {
               (_, updateResult) => {
                 if (updateResult.rowsAffected > 0) {
                   setTaskList(updatedTasks);
-                } else {
-                  console.error('Falha ao alterar o estado "done".');
                 }
               }
             );
-          } else {
-            console.error('Lista não encontrada.');
           }
         }
       );
